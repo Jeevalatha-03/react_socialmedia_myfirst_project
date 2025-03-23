@@ -15,6 +15,7 @@ import useWindowSize from "./hooks/useWindowSize";
 import { useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import EditPost from "./EditPost";
+import {width} from "./hooks/useWindowSize"
 
 
 
@@ -107,7 +108,7 @@ function App() {
     
     <div className="App">
     
-          <Header title=" Social Media" />
+          <Header title=" Social Media" width={width} />
           <Nav  search={search} setSearch={setSearch}/>
           <Routes>
             <Route path="/" element={<Home searchResults={searchResults} 
